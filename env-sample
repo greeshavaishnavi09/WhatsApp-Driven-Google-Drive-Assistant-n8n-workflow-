@@ -1,0 +1,15 @@
+# Twilio Credentials
+TWILIO_ACCOUNT_SID=your_twilio_account_sid
+TWILIO_AUTH_TOKEN=your_twilio_auth_token
+TWILIO_WHATSAPP_NUMBER=whatsapp:+14155238886
+
+# OpenAI API Key
+OPENAI_API_KEY=your_openai_api_key
+
+# Google Drive OAuth2
+GDRIVE_CLIENT_ID=your_google_client_id
+GDRIVE_CLIENT_SECRET=your_google_client_secret
+GDRIVE_REFRESH_TOKEN=your_refresh_token
+
+# Google Sheet for logging
+AUDIT_SPREADSHEET_ID=your_google_sheet_id
