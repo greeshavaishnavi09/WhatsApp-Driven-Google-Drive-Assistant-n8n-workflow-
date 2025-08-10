@@ -187,8 +187,7 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "https://api.twilio.com/2010-04-01/Accounts/"TWILIO_ACCOUNT_SID_HERE"
-        /Messages.json",
+        "url": "https://api.twilio.com/2010-04-01/Accounts/${TWILIO_ACCOUNT_SID}"/Messages.json",
         "authentication": "genericCredentialType",
         "genericAuthType": "httpBasicAuth",
         "sendBody": true,
@@ -592,6 +591,66 @@
       ],
       "id": "1e6342a4-fe08-4981-af09-c61d0e979ac9",
       "name": "Code5"
+    },
+    {
+      "parameters": {
+        "authentication": "serviceAccount",
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "={{ $now }}",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        }
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [
+        96,
+        96
+      ],
+      "id": "57dc5ce2-5610-4922-899a-88f1cdfa9133",
+      "name": "Append row in sheet",
+      "credentials": {
+        "googleApi": {
+          "id": "j3cC3bdAQd2jOG6S",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "serviceAccount",
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        }
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [
+        -48,
+        496
+      ],
+      "id": "672bdab7-34b0-4278-a161-efc938edc566",
+      "name": "Append row in sheet1",
+      "credentials": {
+        "googleApi": {
+          "id": "v4AbHO0H3Yz9Iowk",
+          "name": "Google Service Account account"
+        }
+      }
     }
   ],
   "pinData": {},
@@ -879,7 +938,7 @@
     "saveDataSuccessExecution": "none",
     "callerPolicy": "workflowsFromSameOwner"
   },
-  "versionId": "7be680f2-40b5-4bd7-b267-44c4ac3af8c3",
+  "versionId": "327ba4bb-817a-48c9-afd8-74ad67b5df28",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "f44337b26b53e8c030e11d6fe8108823d745615036c7dbb3c8bb0300f52c8487"
